@@ -1,5 +1,7 @@
 body{
-    background-color: rgb(240, 235, 229);
+    background-image: url(img/cachorro-de-pelo-curto-confira-dicas-e-cuidados.jpg);
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container{
@@ -8,7 +10,7 @@ body{
     padding: 10;
     justify-content: center;
     position: absolute;
-    top: 35%;
+    top: 10%;
     left: 41%;
     box-shadow: 5px 10px rgb(165, 151, 125) ;
 }
@@ -16,7 +18,6 @@ body{
 button{
     padding: 10;
     width: 50%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #botao{
     width: 100%;
