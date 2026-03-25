@@ -13,6 +13,10 @@ body{
     top: 10%;
     left: 41%;
     box-shadow: 5px 10px rgb(165, 151, 125) ;
+    overflow-y: auto;
+    height: 700px;
+    width: 300px;
+    
 }
 
 button{
