@@ -16,7 +16,15 @@ body{
     overflow-y: auto;
     height: 700px;
     width: 300px;
-    
+}
+.container::-webkit-scrollbar{
+    background-color: bisque;
+    width: 8px;
+}
+.container::-webkit-scrollbar-thumb{
+    background-color: rgb(241, 175, 95);
+    width: 8px;
+    border-radius: 200px;
 }
 
 button{
