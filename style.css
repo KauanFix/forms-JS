@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(240, 235, 229);
+}
+
+.container{
+    background-image: linear-gradient(wheat, rgb(245, 238, 226));
+    display: inline-block;
+    padding: 10;
+    justify-content: center;
+    position: absolute;
+    top: 35%;
+    left: 41%;
+    box-shadow: 5px 10px rgb(165, 151, 125) ;
+}
+
+button{
+    padding: 10;
+    width: 50%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#botao{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    padding: 10;
+}
