@@ -70,6 +70,20 @@
                         <br>
                     </fieldset>
                 </div>
+
+                <div id="quintalSeguro">
+                    <fieldset>
+                        <legend>O quintal é seguro?</legend>
+
+                        <input type="radio" name="quintalSeguro" id="simSeguro" value="Sim" required>
+                        <label for="simSeguro">Sim</label><br>
+                        <br>
+
+                        <input type="radio" name="quintalSeguro" id="naoSeguro" value="Não">
+                        <label for="naoSeguro">Não</label><br>
+                        <br>
+                    </fieldset>
+                </div>
             </fieldset>
 
 
@@ -108,7 +122,7 @@
 
             <label for="sozinho">Quantas <b>horas</b> o animal ficará <b>sozinho</b> por dia?</label><br>
             <div class="flex">
-                <input type="number" id="sozinho" min="0" placeholder="2">
+                <input type="number" id="sozinho" min="0" placeholder="0">
                 <p>Horas</p>
             </div>
 

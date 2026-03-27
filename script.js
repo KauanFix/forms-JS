@@ -88,3 +88,18 @@ radiosMoradia.forEach(radio => {
         }
     });
 });
+
+
+
+const radiosMoradia2 = document.querySelectorAll('input[name="Moradia"]');
+const quintalSeguro = document.getElementById('quintalSeguro');
+
+radiosMoradia2.forEach(radio => {
+    radio.addEventListener('change', () => {
+        if (document.getElementById('casa').checked) {
+            quintalSeguro.style.display = "block";
+        } else {
+            quintalSeguro.style.display = "none";
+        }
+    });
+});

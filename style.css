@@ -35,6 +35,9 @@ body{
 #permissao{
     display: none;
 }
+#quintalSeguro{
+    display: none;
+}
 
 button{
     padding: 10;
