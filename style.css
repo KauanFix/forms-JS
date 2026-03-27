@@ -5,6 +5,10 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.flex{
+    display: flex;
+}
+
 .container{
     background-image: linear-gradient(wheat, rgb(245, 238, 226));
     display: inline-block;
@@ -28,6 +32,10 @@ body{
     border-radius: 200px;
 }
 
+#permissao{
+    display: none;
+}
+
 button{
     padding: 10;
     width: 50%;
@@ -40,4 +48,8 @@ button{
 
 input{
     padding: 10;
+}
+
+textarea{
+    resize: none;
 }

@@ -31,7 +31,7 @@
             <br>
 
             <label for="cpf">CPF:</label><br>
-            <input type="text" id="cpf" placeholder="XXX.XXX.XXX-XX">
+            <input required type="text" id="cpf" placeholder="XXX.XXX.XXX-XX">
             <div id="erroCpf" class="erro"></div>
             <br>
 
@@ -41,26 +41,43 @@
             <br>
 
             <label for="cidade">Cidade:</label><br>
-            <input type="text" id="cidade" placeholder="São Paulo">
+            <input type="text" id="cidade" placeholder="São Paulo" required>
             <div id="erroCidade" class="erro"></div>
             <br>
 
-            <h4>Tipo de Moradia:</h4>
+            <fieldset>
+                <legend>Tipo de Moradia:</legend>
+                <input type="radio" name="Moradia" id="casa" value="Casa" required>
+                <label for="casa">Casa</label><br>
+                <br>
 
-            <input type="radio" name="Moradia" id="casa" value="Casa">
-            <label for="moradia">Casa</label><br>
-            <br>
+                <input type="radio" name="Moradia" id="apartamento" value="Apartamento">
+                <label for="apartamento">Apartamento</label><br>
 
-            <input type="radio" name="Moradia" id="apartamento" value="Apartamento">
-            <label for="moradia">Apartamento</label><br>
+                <div id="erroMoradia" class="erro"></div>
+                <br>
 
-            <div id="erroMoradia" class="erro"></div>
-            <br>
+                <div id="permissao">
+                    <fieldset>
+                        <legend>Permite Animais?</legend>
+
+                        <input type="radio" name="Permissao" id="simPermissao" value="Sim" required>
+                        <label for="simPermissao">Sim</label><br>
+                        <br>
+
+                        <input type="radio" name="Permissao" id="naoPermissao" value="Não">
+                        <label for="naoPermissao">Não</label><br>
+                        <br>
+                    </fieldset>
+                </div>
+            </fieldset>
+
+
 
             <fieldset>
                 <legend>Possui Quintal?</legend>
 
-                <input type="radio" name="Quintal" id="simQuintal" value="Sim">
+                <input type="radio" name="Quintal" id="simQuintal" value="Sim" required>
                 <label for="quintal">Sim</label><br>
                 <br>
 
@@ -71,11 +88,12 @@
                 <br>
             </fieldset>
 
+            <br>
 
-            <fieldset>
+            <fieldset req>
                 <legend>Já teve Pet?</legend>
 
-                <input type="radio" name="Pet" id="simPet" value="Sim">
+                <input type="radio" name="Pet" id="simPet" value="Sim" required>
                 <label for="Pet">Sim</label><br>
                 <br>
 
@@ -86,13 +104,33 @@
                 <br>
             </fieldset>
 
+            <br>
 
             <label for="sozinho">Quantas <b>horas</b> o animal ficará <b>sozinho</b> por dia?</label><br>
-            <input type="number" id="sozinho" placeholder="2">
-            <p>Horas</p>
+            <div class="flex">
+                <input type="number" id="sozinho" min="0" placeholder="2">
+                <p>Horas</p>
+            </div>
+
             <div id="erroSozinho" class="erro"></div>
             <br>
 
+            <fieldset>
+                <legend>Motivação:</legend>
+                <label for="motivo"></label><br>
+                <textarea id="motivo" rows="6" cols="30" placeholder="(min.10 caracteres)" minlength="10"></textarea>
+                <div id="erroMotivo" class="erro"></div>
+
+            </fieldset>
+
+            <br>
+            <input type="checkbox" id="termoUso" required>
+            <label for="termoUso">Aceito os termos de uso</label>
+            <div id="erroTermo" class="erro"></div>
+            <br>
+
+
+            <br>
             <div id="botao">
                 <button type="submit">Enviar</button>
             </div>
