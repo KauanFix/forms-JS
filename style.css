@@ -21,6 +21,8 @@ body{
     overflow-y: auto;
     height: 700px;
     width: 300px;
+    border: solid rgb(214, 178, 111) 10px;
+    border-radius: 50px 0px 0px 50px;
 }
 .container::-webkit-scrollbar{
     background-color: bisque;
