@@ -5,6 +5,24 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#posso-fala{
+    display: flex;
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    top: 25%;
+    left: 10%;
+}
+
+#fala-doido{
+    display: flex;
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    top: 25%;
+    left: 61%;
+}
+
 .flex{
     display: flex;
 }
