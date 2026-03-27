@@ -58,6 +58,17 @@ form.addEventListener('submit', function (event) {
         valido = false;
     }
 
+    if (sozinho >= 8) {
+        alert("Não é recomendado deixar o animalzinho tanto tempo sozinho, reflita!");
+    }
+
+    const CPFs = ["123.456.789-10", "109.876.543-21", "000.000.000-00"]
+    if (cpf == CPFs[0] || cpf == CPFs[1] || cpf == CPFs[2]) {
+        document.getElementById('erroCpf').textContent = 'O CPF não pode ser repetido'
+
+        valido = false;
+    }
+
 
 
     if (valido) {
@@ -76,10 +87,10 @@ form.addEventListener('submit', function (event) {
     }
 
 })
-const radiosMoradia = document.querySelectorAll('input[name="Moradia"]');
+const radiosApartamento = document.querySelectorAll('input[name="Moradia"]');
 const permissao = document.getElementById('permissao');
 
-radiosMoradia.forEach(radio => {
+radiosApartamento.forEach(radio => {
     radio.addEventListener('change', () => {
         if (document.getElementById('apartamento').checked) {
             permissao.style.display = "block";
@@ -90,16 +101,25 @@ radiosMoradia.forEach(radio => {
 });
 
 
-
-const radiosMoradia2 = document.querySelectorAll('input[name="Moradia"]');
+const radiosCasa = document.querySelectorAll('input[name="Moradia"]');
 const quintalSeguro = document.getElementById('quintalSeguro');
 
-radiosMoradia2.forEach(radio => {
+radiosCasa.forEach(radio => {
     radio.addEventListener('change', () => {
         if (document.getElementById('casa').checked) {
             quintalSeguro.style.display = "block";
         } else {
             quintalSeguro.style.display = "none";
+        }
+    });
+});
+
+const radiosPet = document.querySelectorAll('input[name="Pet"]');
+
+radiosPet.forEach(radio => {
+    radio.addEventListener('change', () => {
+        if (document.getElementById('naoPet').checked) {
+            alert("Pela falta de experiência é possível acompanhamento da ONG");
         }
     });
 });
