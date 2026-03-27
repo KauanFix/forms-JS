@@ -68,6 +68,16 @@ form.addEventListener('submit', function (event) {
 
         valido = false;
     }
+    if (!cpf.includes('.') || !cpf.includes('-')){
+        document.getElementById('erroCpf').textContent = 'O CPF precisa ter ponto e traço'
+
+        valido = false;
+    }
+    if (cpf.length < 15){
+        document.getElementById('erroCpf').textContent = 'O CPF precisa preencher todos os campos'
+
+        valido = false;
+    }
 
 
 
@@ -79,7 +89,16 @@ form.addEventListener('submit', function (event) {
         Dados enviados: <br>
         Nome: ${nome} <br> 
         Email: ${email} <br> 
-        Senha: ${senha} <br>
+        Telefone: ${telefone} <br>
+        CPF: ${cpf} <br>
+        Idade: ${idade} <br>
+        Cidade: ${cidade} <br>
+        Idade: ${idade} <br>
+        Moradia: ${moradia} <br>
+        Quintal: ${quintal} <br>
+        Pet: ${pet} <br>
+        Sozinho: ${sozinho} <br>
+        Motivo: ${motivo} <br>
         `;
 
         form.reset();
