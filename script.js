@@ -26,6 +26,7 @@ form.addEventListener('submit', function (event) {
     let moradia = getRadioValue('Moradia');
     let quintal = getRadioValue('Quintal');
     let pet = getRadioValue('Pet');
+
     let sozinho = document.getElementById('sozinho').value;
     let motivo = document.getElementById('motivo').value;
     let termoUso = document.getElementById('termoUso').checked;
@@ -42,12 +43,37 @@ form.addEventListener('submit', function (event) {
     document.getElementById('erroSozinho').textContent = '';
     document.getElementById('erroMotivo').textContent = '';
     document.getElementById('erroTermo').textContent = '';
+    
+    if (valido) {
+
+        let resultado = document.getElementById('resultado')
+
+        resultado.innerHTML = `
+        Dados enviados: <br>
+        Nome: ${nome} <br> 
+        Email: ${email} <br> 
+        Telefone: ${telefone} <br>
+        CPF: ${cpf} <br>
+        Idade: ${idade} <br>
+        Cidade: ${cidade} <br>
+        Moradia: ${moradia} <br>
+        Quintal: ${quintal} <br>
+        Pet: ${pet} <br>
+        Sozinho: ${sozinho} <br>
+        Motivo: ${motivo} <br>
+        `;
+
+        form.reset();
+
+    }
+});
 
     //VALIDAÇÔES
 
     //Nome
 
     if (nome.length < 3) {
+        
         document.getElementById('erroNome').textContent = 'Nome deve ter no mínimo 3 letras'
 
         valido = false;
@@ -153,30 +179,9 @@ form.addEventListener('submit', function (event) {
     //Validação Final
 
 
-    if (valido) {
+   
 
-        let resultado = document.getElementById('resultado')
 
-        resultado.innerHTML = `
-        Dados enviados: <br>
-        Nome: ${nome} <br> 
-        Email: ${email} <br> 
-        Telefone: ${telefone} <br>
-        CPF: ${cpf} <br>
-        Idade: ${idade} <br>
-        Cidade: ${cidade} <br>
-        Moradia: ${moradia} <br>
-        Quintal: ${quintal} <br>
-        Pet: ${pet} <br>
-        Sozinho: ${sozinho} <br>
-        Motivo: ${motivo} <br>
-        `;
-
-        form.reset();
-
-    }
-
-})
 const radiosApartamento = document.querySelectorAll('input[name="Moradia"]');
 const permissao = document.getElementById('permissao');
 
